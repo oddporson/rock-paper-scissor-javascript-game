@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif; 
+}
+
+.score {
+    color: rgb(0, 0, 0); 
+    height: 20vh; 
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.score h2 {
+    font-size: 30px;
+    font-family: "PT Mono", monospace;
+}
+
+.score p {
+    text-align: center;
+    padding: 10px;  
+    font-size: 25px;
+    font-family: "PT Mono", monospace; 
+}
+
+.intro {
+    color: rgb(0, 0, 0);
+    height: 50vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    transition: opacity 0.5s ease; /* this fades out in 0.5 seconds when user click the "let's play" button */
+}
+
+.intro h1 {
+    font-size: 50px; 
+    font-family: "PT Mono", monospace;
+}
+
+.intro button, 
+.match button {
+    width: 150px;
+    height: 50px; 
+    background: none; 
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px; 
+    background: rgb(0, 0, 0);
+    border-radius: 3px; 
+    cursor: pointer; 
+    font-family: "PT Mono", monospace;
+}
+
+.match {
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s; /* this fades out on when user click the start button in a slower way */
+}
+
+.match h2 {
+    font-family: "PT Mono", monospace;
+}
+
+.winner {
+    color: rgb(0, 0, 0);
+    text-align: center; 
+    font-size: 50px;
+}
+
+.hands,
+.options {
+    display: flex; 
+    justify-content: space-around;
+    align-content: center; 
+}
+
+.player-hand {
+    transform: rotateY(180deg);
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+} /* What it does is basically you can click on an element
+    so if we add pointer events to none to the whole intro section,
+    we cannot click on the intro section. */
+
+div.fadeIn {
+    opacity: 1; 
+    pointer-events: all;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 2em;
+    font-family: "PT Mono", monospace;
+}
